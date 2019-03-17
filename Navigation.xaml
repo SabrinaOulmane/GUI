@@ -1,0 +1,48 @@
+﻿<Window x:Class="GUI_RDF.Navigation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_RDF"
+        mc:Ignorable="d"
+        Title="Navigation" WindowStyle="None" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Image  Source="logodb.png" Stretch="Uniform"  Grid.Row="0"  />
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Background="White" FontWeight="Bold" >NAVIGATION</Label>
+        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Background="White" FontWeight="Light" FontStyle="Italic" >From what node do you want to start ?</Label>
+
+        <TextBox x:Name="Navigation_node_text" Grid.Row="3"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Type, Mode=TwoWay}" Margin="48,20,42,20" Width="670"></TextBox>
+
+
+        <StackPanel Grid.Row="4"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Label x:Name="Navigation_Method_Selection" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Background="White" FontWeight="Light" FontStyle="Italic">The node is </Label>
+            <Button x:Name="Navigation_Subject_Node" Click="Navigation_Subject_Node_Click" HorizontalAlignment="Right" VerticalAlignment="Center"> an object node</Button>
+            <Button x:Name="Navigation_Object_Node" Click="Navigation_Object_Node_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Content="a subject node"/>
+        </StackPanel>
+
+        <Label Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Background="White" FontWeight="Bold" >RESULTS</Label>
+
+        <ListBox x:Name="Navigation_Result_List" Grid.Row="6"  Visibility="Hidden" Grid.RowSpan="2"></ListBox>
+
+        <Button x:Name="Navigation_Quit" Grid.Row="8" Click="Navigation_Quit_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="44" Margin="0,12,643,10" Width="117" RenderTransformOrigin="4.393,0.318">QUIT</Button>
+        <Button x:Name="Navigation_Main_Menu" Grid.Row="8" Click="Navigation_Main_Menu_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="44" Margin="633,10,10,12" Width="117" RenderTransformOrigin="4.393,0.318">MAIN MENU</Button>
+
+
+
+
+
+    </Grid>
+</Window>

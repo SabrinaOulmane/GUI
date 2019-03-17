@@ -1,0 +1,60 @@
+﻿<Window x:Class="GUI_RDF.Relations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_RDF"
+        mc:Ignorable="d"
+        Title="Relations" WindowStyle="None" WindowState="Maximized">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image  Source="logodb.png" Stretch="Uniform"  Grid.Row="0" Grid.ColumnSpan="2"  />
+        <Label x:Name="Relation_Title" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Background="White" FontWeight="Bold" Grid.ColumnSpan="2">RELATIONS LINKED DATA</Label>
+
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="0">
+            <Label x:Name="Relation_object1"  FontSize="15"  FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="154,0">OBJECT 1</Label>
+            <Label x:Name="Relation_object2" FontSize="15"  FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center">OBJECT 2</Label>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+            <TextBox x:Name="Relation_object1_text"  Text="{Binding Type, Mode=TwoWay}" Margin="0,0,122,0" ></TextBox>
+            <TextBox x:Name="Relation_object2_text"  Text="{Binding Type, Mode=TwoWay}" Margin="0,0,122,0"></TextBox>
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="0">
+            <Label x:Name="Relation_distance"  FontSize="15"  FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center">Distance</Label>
+            <Label x:Name="Relation_number_result"  FontSize="15"  FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center">Number max of results</Label>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="1">
+            <TextBox x:Name="Relation_distance_text" Text="{Binding Type, Mode=TwoWay}" Margin="0,0,122,0"></TextBox>
+            <TextBox x:Name="Relation_number_result_text" Text="{Binding Type, Mode=TwoWay}" Margin="0,0,122,0"></TextBox>
+        </StackPanel>
+
+        
+            <Button x:Name="Relation_Button" Click="Relation_Button_Click" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">VALIDATE</Button>
+
+        <ListBox x:Name="Relation_Result_List" Visibility="Hidden" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="3"></ListBox>
+        
+        <Button x:Name="Relations_Quit" Grid.Row="8" Grid.ColumnSpan="2" Click="Relations_Quit_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="44" Margin="0,12,643,10" Width="117" RenderTransformOrigin="4.393,0.318">QUIT</Button>
+        <Button x:Name="Relations_Main_Menu" Grid.Row="8"  Grid.ColumnSpan="2" Click="Relations_Main_Menu_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="44" Margin="633,10,10,12" Width="117" RenderTransformOrigin="4.393,0.318">MAIN MENU</Button>
+     
+    </Grid>
+</Window>
